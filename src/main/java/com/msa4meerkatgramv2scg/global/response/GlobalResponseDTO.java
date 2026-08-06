@@ -12,7 +12,7 @@ public record GlobalResponseDTO<T>(
     }
 
     public static GlobalResponseDTO<Void> from(CustomResponseCode customResponseCode) {
-        return new GlobalResponseDTO<Void>(customResponseCode.getCode(), customResponseCode.name(), null);
+        return new GlobalResponseDTO<Void>(customResponseCode.getCode(), "customResponseCode.name()", null);
     }
 
     public static <T> GlobalResponseDTO<T> success(T data) {
